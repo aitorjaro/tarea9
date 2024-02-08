@@ -7,6 +7,9 @@
 		@import url("estilo.css");
 	</style>
 </head>
+
+
+<body>
 <header>
 	<section>
 		<img src="Riot_Games_logo.png" />
@@ -14,10 +17,16 @@
 	<section>
 		<h1>Análisis de campeones</h1>
 	</section>
+	
 </header>
-
-<body>
 	<section class="principal">
+	<nav>
+		<ul>
+			<li><a href="index.php">Lista de campeones</a></li>
+			<li><a href="pruebas.php">Pruebas de la API</a></li>
+		</ul>
+	</nav>
+	<hr>
 		<h2>LISTA DE CAMPEONES</h2>
 		<p class="centro">Aquí se detallan todos los campeones de League of Legends, incluyendo sus descripciones.</p>
 		<section class="campeones">
@@ -27,8 +36,8 @@
 			 * Obtiene la lista de campeones de League of Legends
 			 *
 			 * Esta función usa la API de Riot Games para obtener los datos de los campeones
-			 * en formato JSON y los convierte en un array.
-			 * @return array El array con los campeones
+			 * en formato JSON.
+			 * @return array Array asociativo con los campeones
 			 */
 			function obtenerCampeones()
 			{
@@ -43,7 +52,7 @@
 			}
 
 			foreach (obtenerCampeones() as $campeon) {
-				echo "<article>";
+				echo "<article class='campeones'>";
 
 				echo '<img src="https://ddragon.leagueoflegends.com/cdn/14.3.1/img/champion/' . $campeon->image->full . '">' . "<br/>";
 				echo "<b><p>" . $campeon->name . "\n" . "</p></b>";

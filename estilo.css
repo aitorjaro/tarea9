@@ -25,6 +25,22 @@ header{
     align-items: center;
     color:white;
 }
+nav{
+    background: white;
+}
+ul{
+    display:flex;
+    justify-content: space-evenly;
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+    color:black;
+}
+a:hover{
+    text-decoration: none;
+    color:#D13639;
+}
 h1{
     font-family: Barlow;
     text-transform: uppercase;
@@ -49,9 +65,17 @@ section.campeones{
     flex-wrap: wrap;
     justify-content: center;
 }
-article{
+section.pruebas{
+    text-align: center;
+    display:flex;
+    justify-content: space-evenly;
+}
+article.campeones{
     width:150px;
     margin-left:5px;
     margin-bottom: 10px;
     text-align: center;
+}
+article.pruebas{
+
 }
